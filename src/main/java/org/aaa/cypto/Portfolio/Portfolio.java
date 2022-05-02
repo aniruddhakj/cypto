@@ -1,13 +1,11 @@
 package org.aaa.cypto.Portfolio;
 
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -59,7 +57,6 @@ public class Portfolio implements PortfolioInterface {
         while(it.hasNext())
         {
             date=it.next().toString();
-            //	date=getLatest(date);
             invest+=(s.getClosePrice(getLatest(date))*(jpurch.getInt(date)));
         }
         return invest;
@@ -74,7 +71,6 @@ public class Portfolio implements PortfolioInterface {
         while(it.hasNext())
         {
             date=it.next().toString();
-            //	date=getLatest(date);
             sale+=(s.getClosePrice(getLatest(date))*(jsale.getInt(date)));
         }
         return sale;
@@ -168,7 +164,6 @@ public class Portfolio implements PortfolioInterface {
             list.add(s);
             i++;
         }
-//		System.out.println(list);
         return list;
 
     }
@@ -312,10 +307,8 @@ public class Portfolio implements PortfolioInterface {
         pop.add(table);
         pop.setSize(300,400);
         pop.setVisible(true);
-
-
-
     }
+
     public void displaySaleHistory() throws JSONException
     {
         System.out.println("Sale History");
@@ -357,8 +350,6 @@ public class Portfolio implements PortfolioInterface {
                     data[k]=data[k+1];
                     data[k+1]=temp;
                 }
-
-
             }
         }
         String col[]= {"a","b","c","d"};
@@ -371,11 +362,6 @@ public class Portfolio implements PortfolioInterface {
         pop.setVisible(true);
 
     }
-
-
-    // public static void main(String[] args) throws Exception {
-
-    // }
 
 }
 

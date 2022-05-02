@@ -19,9 +19,6 @@ public class MyAccount extends JFrame implements ActionListener {
     private CryptoAccount userCryptoAccountMA;
     private JLabel balanceLabel_data;
 
-    // public static void main(String args[]) {
-
-    // }
 
     public void userDetails() throws JSONException {
 
@@ -80,7 +77,7 @@ public class MyAccount extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setSize(500,600);
         this.setLayout(null);
-        this.getContentPane().setBackground(new Color(133,205,202));
+        this.getContentPane().setBackground(new Color(21, 39, 124));
 
 
         History_button = new JButton("History");
@@ -113,7 +110,7 @@ public class MyAccount extends JFrame implements ActionListener {
         money_TextField_MA = new JTextField();
         money_TextField_MA.setBounds(150+50,373  - 150,120,25);
         money_TextField_MA.setPreferredSize(new Dimension(120,25));
-        money_TextField_MA.setForeground(new Color(102, 12, 86));
+        money_TextField_MA.setForeground(new Color(229, 25, 25));
         money_TextField_MA.setBackground(Color.WHITE);
 
         this.add(History_button);
@@ -143,12 +140,8 @@ public class MyAccount extends JFrame implements ActionListener {
             displayMessage(str);
         }
         if(e.getSource()==Add_Money_button){
-            // add money call method
-            //money_TextField_MA.getText() is the money entered
-
             try {
                 userCryptoAccountMA.addMoney(Double.parseDouble(money_TextField_MA.getText()));
-//                balanceLabel_data = new JLabel(String.valueOf(userCryptoAccountMA.getBalance()));
                 balanceLabel_data.setText(String.valueOf(userCryptoAccountMA.getBalance()));
                 System.out.println(String.format("Added %s to account balance ! ",money_TextField_MA.getText()));
                 displayMessage(String.format("Added %s to account balance ! ",money_TextField_MA.getText()));
@@ -159,12 +152,8 @@ public class MyAccount extends JFrame implements ActionListener {
             }
         }
         if(e.getSource()==Deduct_Money_button){
-            // deduct money call method
-            //money_TextField_MA.getText() is the money entered
-
             try {
                 userCryptoAccountMA.deductMoney(Double.parseDouble(money_TextField_MA.getText()));
-//                balanceLabel_data = new JLabel(String.valueOf(userCryptoAccountMA.getBalance()));
                 balanceLabel_data.setText(String.valueOf(userCryptoAccountMA.getBalance()));
                 System.out.println(String.format("Deducted %s from account balance ! ",money_TextField_MA.getText()));
                 displayMessage(String.format("Deducted %s from account balance ! ",money_TextField_MA.getText()));

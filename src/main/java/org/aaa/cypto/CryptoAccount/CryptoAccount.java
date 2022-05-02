@@ -111,8 +111,8 @@ public class CryptoAccount extends Account {
         file.close();
     }
 
-    public void buyToken(String symbol, int noOfShares) throws JSONException, IOException {
-        System.out.println("Buying "+noOfShares+" shares of "+symbol);
+    public void buyToken(String symbol, int noOfTokens) throws JSONException, IOException {
+        System.out.println("Buying "+noOfTokens+" Tokens of "+symbol);
         Coin coin = new Coin(symbol);
         LinkedList<String> listOfCoins = this.CoinList();
         boolean exists = false;
@@ -123,9 +123,9 @@ public class CryptoAccount extends Account {
             }
         }
         if(exists){
-            UserAccount_Data.getJSONObject(symbol).getJSONObject("buys").put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfShares);
+            UserAccount_Data.getJSONObject(symbol).getJSONObject("buys").put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfTokens);
             int currentHoldings = Integer.parseInt(UserAccount_Data.getJSONObject(symbol).get("CurrentHoldings").toString());
-            UserAccount_Data.getJSONObject(symbol).put("CurrentHoldings",currentHoldings + noOfShares);
+            UserAccount_Data.getJSONObject(symbol).put("CurrentHoldings",currentHoldings + noOfTokens);
             System.out.println("Successful");
         }
         else{
@@ -133,18 +133,18 @@ public class CryptoAccount extends Account {
             JSONObject buys = new JSONObject();
             JSONObject sells = new JSONObject();
 
-            buys.put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfShares);
+            buys.put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfTokens);
 
             coinJSONObject.put("buys",buys);
             coinJSONObject.put("sells",sells);
 
-            coinJSONObject.put("CurrentHoldings",noOfShares);
+            coinJSONObject.put("CurrentHoldings",noOfTokens);
 
             UserAccount_Data.put(symbol,coinJSONObject);
         }
 
         double currPrice = new Coin(symbol).getClosePrice();
-        this.deductMoney(currPrice*noOfShares);
+        this.deductMoney(currPrice*noOfTokens);
 
         dataUAD.put(this.getUserID(),UserAccount_Data);
         FileWriter file = new FileWriter("/Users/aniruddhakj/Desktop/Java Lab/cypto/src/main/java/org/aaa/cypto/UserAccount_Data.json");
@@ -153,14 +153,14 @@ public class CryptoAccount extends Account {
 
     }
 
-    public void sellToken(String symbol, int noOfShares) throws JSONException, IOException {
+    public void sellToken(String symbol, int noOfTokens) throws JSONException, IOException {
         Coin coin = new Coin(symbol);
 
-        UserAccount_Data.getJSONObject(symbol).getJSONObject("sells").put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfShares);
+        UserAccount_Data.getJSONObject(symbol).getJSONObject("sells").put(String.valueOf(LocalDateTime.now().minusDays((long) 1)).substring(0,10),noOfTokens);
         int currentHoldings = Integer.parseInt(UserAccount_Data.getJSONObject(symbol).get("CurrentHoldings").toString());
-        UserAccount_Data.getJSONObject(symbol).put("CurrentHoldings",currentHoldings - noOfShares);
+        UserAccount_Data.getJSONObject(symbol).put("CurrentHoldings",currentHoldings - noOfTokens);
         double currPrice = new Coin(symbol).getClosePrice();
-        this.addMoney(currPrice*noOfShares);
+        this.addMoney(currPrice*noOfTokens);
         dataUAD.put(this.getUserID(),UserAccount_Data);
         FileWriter file = new FileWriter("/Users/aniruddhakj/Desktop/Java Lab/cypto/src/main/java/org/aaa/cypto/UserAccount_Data.json");
         file.write(dataUAD.toString());

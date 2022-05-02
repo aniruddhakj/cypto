@@ -24,7 +24,6 @@ public class ParsingJSON {
             URL url = new URL(link);
             connection = (HttpURLConnection) url.openConnection();
             int status = connection.getResponseCode();
-            // System.out.println(status);
             if (status > 299) {
                 reader = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
                 while ((line = reader.readLine()) != null) {
@@ -38,7 +37,6 @@ public class ParsingJSON {
                 }
                 reader.close();
             }
-            // System.out.println(responceContent.toString());
             String rawJsonData = responceContent.toString();
             return rawJsonData;
         } catch (MalformedURLException e) {

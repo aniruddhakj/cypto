@@ -27,13 +27,8 @@ public class PortfolioGui extends JFrame implements ActionListener{
     JButton coinDetails;
     JTextField text;
 
-    /**
-    /**
-    /**
-     * Launch the application.
-     */
+
     public static void main(String[] args) {
-//		PortfolioGui gui=new PortfolioGui("EsNN");
     }
 
     /**
@@ -95,12 +90,10 @@ public class PortfolioGui extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        Portfolio p=null;
+        Portfolio p = null;
         try {
-            p=new Portfolio(userId);
+            p = new Portfolio(userId);
         } catch (Exception e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
 

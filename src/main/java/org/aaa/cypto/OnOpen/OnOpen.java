@@ -47,7 +47,7 @@ public class OnOpen implements ActionListener {
         myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         myFrame.setSize(500,600);
         myFrame.setLayout(null);
-        myFrame.getContentPane().setBackground(new Color(133,205,202));
+        myFrame.getContentPane().setBackground(new Color(34, 55, 166));
         myFrame.add(button);
         myFrame.add(button2);
         myFrame.add(button3);
@@ -58,8 +58,6 @@ public class OnOpen implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        //    PossibleMain2 ps = new PossibleMain2();
 
         if(e.getSource()==button){
             System.out.println("Create Account");
