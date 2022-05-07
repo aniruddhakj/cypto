@@ -1,1 +1,84 @@
-{"nfm8":{},"anikj":{"ethereum":{"buys":{"2022-05-01":3},"sells":{"2022-05-01":1},"CurrentHoldings":4},"litecoin":{"buys":{"2022-05-01":10},"sells":{"2022-05-01":4},"CurrentHoldings":8},"polygon":{"buys":{"2022-05-01":10},"sells":{"2022-05-01":3},"CurrentHoldings":7}},"WpoQ":{},"what":{},"ammrit":{},"vuRt":{},"ID1":{},"HJEL":{},"amity":{},"ammrit2312":{},"OCOz":{}}
+{
+  "test": {
+    "litecoin": {
+      "buys": {
+        "2022-05-02": 3
+      },
+      "sells": {},
+      "CurrentHoldings": 3
+    }
+  },
+  "ammrit": {},
+  "HJEL": {},
+  "amity": {},
+  "srini": {
+    "ethereum": {
+      "buys": {
+        "2022-05-03": 3
+      },
+      "sells": {},
+      "CurrentHoldings": 3
+    },
+    "polygon": {
+      "buys": {
+        "2022-05-03": 10
+      },
+      "sells": {},
+      "CurrentHoldings": 10
+    }
+  },
+  "nfm8": {},
+  "anikj": {
+    "ethereum": {
+      "buys": {
+        "2022-05-01": 3
+      },
+      "sells": {
+        "2022-05-01": 1
+      },
+      "CurrentHoldings": 4
+    },
+    "litecoin": {
+      "buys": {
+        "2022-05-01": 10
+      },
+      "sells": {
+        "2022-05-01": 4
+      },
+      "CurrentHoldings": 8
+    },
+    "polygon": {
+      "buys": {
+        "2022-05-01": 10
+      },
+      "sells": {
+        "2022-05-01": 3
+      },
+      "CurrentHoldings": 7
+    }
+  },
+  "WpoQ": {},
+  "what": {},
+  "vuRt": {},
+  "ID1": {},
+  "ammrit2312": {},
+  "OCOz": {},
+  "aniruddha": {
+    "litecoin": {
+      "buys": {
+        "2022-05-02": 3
+      },
+      "sells": {
+        "2022-05-02": 2
+      },
+      "CurrentHoldings": 1
+    },
+    "polygon": {
+      "buys": {
+        "2022-05-02": 10
+      },
+      "sells": {},
+      "CurrentHoldings": 10
+    }
+  }
+}

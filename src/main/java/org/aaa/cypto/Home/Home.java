@@ -58,11 +58,8 @@ public class Home extends JFrame implements ActionListener{
             e.printStackTrace();
         }
         initialize();
-//		mainObj=new PossibleMain2();
     }
-    // public static void main(String args[]) {
 
-    // }
     public void displayMessage(String message) {
         JFrame f=new JFrame();
         JOptionPane.showMessageDialog(f,message);
@@ -91,7 +88,7 @@ public class Home extends JFrame implements ActionListener{
         frmCoinAccount.setTitle("coin Account");
         frmCoinAccount.setBounds(100, 100, 900, 600);
         frmCoinAccount.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frmCoinAccount.getContentPane().setBackground(new Color(220, 143,102));
+        frmCoinAccount.getContentPane().setBackground(new Color(75, 203, 215));
         frmCoinAccount.setVisible(true);
 
         My_Coins_Button = new JButton("My coin");
@@ -134,8 +131,8 @@ public class Home extends JFrame implements ActionListener{
 
         textLabel.setBounds(47, 244, 702, 281);
         String intro="<html><br><br><br>1.Share of coin means you have ownership into a cryptocurrency.<br>2.Coin prices vary throughout the day and everyday.";
-        intro+="<br>3.A coin is an investment that can lose money.<br>4.It's good to buy low and sell high.<br>";
-        intro+="<br>Symbols of some popular coin are:<br>BTC - Bitcoin<br>ETH - Ethereum<br>XRP - Polygon</html>";
+        intro+="<br>3.A coin is an investment that can lose money.<br>4. All the prices are in USD.<br>";
+        intro+="<br>Symbols of some popular coin are:<br>ETH - ethereum<br>MATIC - polygon<br>LTC - litecoin</html>";
         textLabel.setText(intro);
         textLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
         frmCoinAccount.getContentPane().add(textLabel);

@@ -49,7 +49,7 @@ public class SecondPage extends JFrame implements ActionListener {
 
         this.add(passwordLabel);
         this.add(passwordTextField);
-        this.getContentPane().setBackground(new Color(64,179,162));
+        this.getContentPane().setBackground(new Color(21, 39, 124));
         this.setVisible(true);
         if(choice==1){
             this.logsin();

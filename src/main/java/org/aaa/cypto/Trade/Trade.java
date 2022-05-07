@@ -69,7 +69,7 @@ public class Trade extends JFrame implements ActionListener{
         frmBuyCoin.setBounds(100, 100, 800, 600);
         frmBuyCoin.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frmBuyCoin.getContentPane().setLayout(null);
-        frmBuyCoin.getContentPane().setBackground(new Color(133,205,202));
+        frmBuyCoin.getContentPane().setBackground(new Color(75, 203, 215));
 
         CoinId = new JTextField();
         CoinId.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -210,7 +210,6 @@ public class Trade extends JFrame implements ActionListener{
             double after=prev;
 
             if(transaction.equals("Buy")) {
-                System.out.println("Toh yeh hai trade "+ coinId);
                 if(possibleAmount(coinId, qty)>prev) {
                     displayMessage("Transaction failed!\nYou do not have enough balance");
                     return;

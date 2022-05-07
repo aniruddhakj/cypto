@@ -19,7 +19,7 @@ public class ParsingJSON {
     public  String giveString() {
         BufferedReader reader;
         String line;
-        StringBuffer responceContent = new StringBuffer();
+        StringBuffer responseContent = new StringBuffer();
         try {
             URL url = new URL(link);
             connection = (HttpURLConnection) url.openConnection();
@@ -27,17 +27,17 @@ public class ParsingJSON {
             if (status > 299) {
                 reader = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
                 while ((line = reader.readLine()) != null) {
-                    responceContent.append(line);
+                    responseContent.append(line);
                 }
                 reader.close();
             } else {
                 reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 while ((line = reader.readLine()) != null) {
-                    responceContent.append(line);
+                    responseContent.append(line);
                 }
                 reader.close();
             }
-            String rawJsonData = responceContent.toString();
+            String rawJsonData = responseContent.toString();
             return rawJsonData;
         } catch (MalformedURLException e) {
             e.printStackTrace();

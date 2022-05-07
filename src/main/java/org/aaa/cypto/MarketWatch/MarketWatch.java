@@ -60,7 +60,7 @@ public class MarketWatch extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setSize(600,400);
         this.setLayout(null);
-        this.getContentPane().setBackground(new Color(133,205,202));
+        this.getContentPane().setBackground(new Color(75, 203, 215));
         this.setVisible(true);
 
         this.add(button1);
@@ -109,14 +109,14 @@ public class MarketWatch extends JFrame implements ActionListener {
         String s="";
         s+="\t\tMarket Indices";
         s+="\n"+"-".repeat(50);
-        s+="\n"+"NYSE Composite index: $16,868.11";
-        s+="\n"+"Dow Jones Industrial Average: $35,515.38";
-        s+="\n"+"S&P 500 Index: $14,822.55";
-        s+="\n"+"Russell 2000 Index: $2,223.11";
-        s+="\n"+"Global Dow Realtime USD: $4,097.02";
-        s+="\n"+"Dow Jones U.S. Total Stock Market Index: $46,820.65";
-        s+="\n"+"NASDAQ 100 Index (NASDAQ Calculation): $15,136.68";
-        s+="\n"+"NYSE Composite Index: $16,868.11";
+        s+="\n"+"From last year number of token increase";
+        s+="\n"+"From last year many coin has decrease in there value";
+        s+="\n"+"Bitcoin down to 38,614$ from last year";
+        s+="\n"+"Ethereum launch there new token";
+        s+="\n"+"Polygon launch there wallet this year";
+        s+="\n"+"In last 10 year crypto market increase by 900%";
+        s+="\n"+"Total market Capital of crypto market is 1.74$ Trillion Dollar ";
+        s+="\n"+"Number of Crypto holder is up by 73% in last year";
         s+="\n"+"-".repeat(50);
         System.out.println(s);
         displayMessage(s);

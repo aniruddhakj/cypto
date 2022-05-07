@@ -53,7 +53,7 @@ public class PortfolioGui extends JFrame implements ActionListener{
         frmPortfolio.setBounds(100, 100, 800, 600);
         frmPortfolio.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frmPortfolio.getContentPane().setLayout(null);
-        frmPortfolio.getContentPane().setBackground(new Color(133,205,202));
+        frmPortfolio.getContentPane().setBackground(new Color(75, 203, 215));
         frmPortfolio.setVisible(true);
 
         port = new JButton("View Portfolio");

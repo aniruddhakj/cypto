@@ -58,7 +58,6 @@ public class Login {
         userInfo.accumulate(acc.getUserId(), ID1);
         try {
             FileWriter file = new FileWriter("/Users/aniruddhakj/Desktop/Java Lab/cypto/src/main/java/org/aaa/cypto/USERDATA.json");
-//		         file.write(jsonObject.toJSONString());
             file.write(userInfo.toString());
             file.close();
         } catch (IOException e) {
@@ -96,8 +95,5 @@ public class Login {
         }
     }
 
-    // public static void main(String[] args) {
-
-    // }
 }
 

@@ -110,7 +110,7 @@ public class MyAccount extends JFrame implements ActionListener {
         money_TextField_MA = new JTextField();
         money_TextField_MA.setBounds(150+50,373  - 150,120,25);
         money_TextField_MA.setPreferredSize(new Dimension(120,25));
-        money_TextField_MA.setForeground(new Color(229, 25, 25));
+        money_TextField_MA.setForeground(new Color(75, 203, 215));
         money_TextField_MA.setBackground(Color.WHITE);
 
         this.add(History_button);
