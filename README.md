@@ -29,7 +29,7 @@ This motivated us to make our own dummy crypto trading platform - CYPTO, which w
 The following are the pre-requisites for this project
 - [Maven](https://maven.apache.org/download.cgi)
 - [JSON jar artifact](https://search.maven.org/artifact/org.json/json)
-- [Eclipse](https://www.eclipse.org/downloads)/[IntelliJ](https://www.jetbrains.com/idea/download) -> OPTIONAL
+- [Eclipse](https://www.eclipse.org/downloads)/[IntelliJ](https://www.jetbrains.com/idea/download) -> Recommended for debugging, Optional
 
 
 # How to run the app
