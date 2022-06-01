@@ -1,6 +1,6 @@
 # CYPTO
-[!license](https://img.shields.io/github/license/aniruddhakj/cypto?color=orange&style=plastic)
-[!stars](https://img.shields.io/github/stars/aniruddhakj/cypto?style=plastic)
+[![license](https://img.shields.io/github/license/aniruddhakj/cypto?color=orange&style=plastic)]
+[![GitHub stars](https://img.shields.io/github/stars/aniruddhakj/cypto?style=plastic)]
 
 Simple simulation of a CryptoCurrency Market using Java-Swing for UE19CS352 project
 
